@@ -4,89 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundo dos Macacos</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f7f6;
-            color: #333;
-        }
+    <header>
+        <h1>Mundo dos Macacos</h1>
+        <p>Explorando a vida, o habitat e a inteligência dos nossos parentes primatas</p>
+    </header>
 
-        header {
-            background-color: #2e6f40;
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-        }
+    <nav>
+        <a href="#introducao">Introdução</a>
+        <a href="#especies">Espécies</a>
+        <a href="#curiosidades">Curiosidades</a>
+    </nav>
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
+    <div class="container">
+        <div class="main-content">
+            
+            <main>
+                <article id="introducao">
+                    <h2>O Fascinante Universo dos Primatas</h2>
+                    <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?w=800" alt="Macaco curioso">
+                    <p>Os macacos são mamíferos primatas que despertam grande interesse devido à sua inteligência, comportamento social complexo e semelhanças com os seres humanos.</p>
+                </article>
 
-        nav {
-            background-color: #1e4629;
-            display: flex;
-            justify-content: center;
-            padding: 0.5rem;
-        }
+                <article id="especies">
+                    <h2>Grandes Grupos: Novo Mundo vs. Velho Mundo</h2>
+                    <p>Cientificamente, os macacos são divididos em dois grandes grupos principais:</p>
+                    <div class="Abas-container">
+                        <button class="aba-btn ativa" onclick="mudarAba('novo-mundo')">Novo Mundo</button>
+                        <button class="aba-btn" onclick="mudarAba('velho-mundo')">Velho Mundo</button>
+                    </div>
+                    
+                    <div id="novo-mundo" class="conteudo-aba">
+                        <p><strong>Platarrinos:</strong> Nativos das Américas Central e do Sul. Muitos possuem cauda preênsil (que funciona como um quinto membro). Exemplos: Macaco-prego e Mico-leão-dourado.</p>
+                    </div>
+                    <div id="velho-mundo" class="conteudo-aba" style="display:none;">
+                        <p><strong>Catarrinos:</strong> Nativos da África e da Ásia. Não possuem cauda preênsil e costumam passar mais tempo no chão. Exemplos: Babuínos e Mandris.</p>
+                    </div>
+                </article>
+            </main>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            margin: 0 0.5rem;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
+            <aside id="curiosidades">
+                <h3>Interaja com o Macaco!</h3>
+                <div class="Card-interativo">
+                    <p id="balao-texto">💬 Olá! Clique no botão para me dar uma banana!</p>
+                    <button id="btn-interagir">Dar Banana 🍌</button>
+                </div>
+            </aside>
 
-        nav a:hover {
-            background-color: #2e6f40;
-        }
+        </div>
+    </div>
 
-        .container {
-            max-width: 1100px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    <footer>
+        <p>&copy; 2026 Mundo dos Macacos - Criado para fins educacionais.</p>
+    </footer>
 
-        .main-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .main-content {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        article {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
-        }
-
-        article h2 {
-            color: #2e6f40;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 0.5rem;
-        }
-
-        article img {
-            width: 100%;
-            height: auto;
-            border-radius: 6px;
-            margin-bottom: 1rem;
-        }
+    <script src="script.js"></script>
+</body>
+</html>
