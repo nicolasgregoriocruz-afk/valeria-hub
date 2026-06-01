@@ -1,0 +1,135 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Cabeçalho e Menu */
+header {
+    background-color: #2e6f40;
+    color: white;
+    text-align: center;
+    padding: 2.5rem 1rem;
+}
+
+nav {
+    background-color: #1e4629;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #2e6f40;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Conteúdo */
+article {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+article h2 {
+    color: #2e6f40;
+    margin-bottom: 1rem;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+aside {
+    background: #e2ebd5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+/* Sistema de Abas (Modificado via JS) */
+.Abas-container {
+    margin: 1rem 0;
+}
+
+.aba-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #ddd;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
+
+.aba-btn.ativa {
+    background-color: #2e6f40;
+    color: white;
+}
+
+/* Área Interativa Lateral */
+.Card-interativo {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+#btn-interagir {
+    background-color: #ffca28;
+    border: none;
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 0.8rem;
+    transition: transform 0.1s;
+}
+
+#btn-interagir:active
